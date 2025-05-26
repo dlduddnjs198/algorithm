@@ -156,7 +156,7 @@ MST 선택 간선: (A-B-1), (B-C-3), (B-D-2), (D-E-6)
 
 | 구현 방식                 | 설명 | 예시 링크 |
 |-----------------------|------|-----------|
-| `Prim_AdjMatrix.java` | **인접 행렬** 기반, (O(V²) | [✔️ Prim_AdjMatrix.java](Prim_AdjMatrix.java) |
+| `Prim_AdjMatrix.java` | **인접 행렬** 기반, (O(V²) | [✔️ Prim_AdjMatrix.java](../code/Prim_AdjMatrix.java) |
 | `Prim_AdjListPQ.java` | **인접 리스트** + 우선순위 큐 (실전 최적 조합) | [✔️ Prim_AdjList.java](../그래프/Prim_AdjList.java) |
 
 ---
@@ -165,8 +165,8 @@ MST 선택 간선: (A-B-1), (B-C-3), (B-D-2), (D-E-6)
 
 | 구현 방식 | 설명 | 예시 링크 |
 |-----------|------|-----------|
-| `Kruskal_UnionFind.java` | 기본적인 **유니온 파인드 기반** 구현 | [✔️ Kruskal_UnionFind.java](Kruskal_UnionFind.java) |
-| `Kruskal_RankUnion.java` | **랭크 기반 유니온 최적화** | [✔️ Kruskal_RankUnion.java](Kruskal_RankUnion.java) |
+| `Kruskal_UnionFind.java` | 기본적인 **유니온 파인드 기반** 구현 | [✔️ Kruskal_UnionFind.java](../code/Kruskal_UnionFind.java) |
+| `Kruskal_RankUnion.java` | **랭크 기반 유니온 최적화** | [✔️ Kruskal_RankUnion.java](../code/Kruskal_RankUnion.java) |
 
 ---
 

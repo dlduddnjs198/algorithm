@@ -17,13 +17,13 @@ SQL(Structured Query Language)으로 “구조화된 데이터를 질의하기 �
 
 테이블은 데이터베이스의 핵심 구성 요소 중 하나로, 행(row)과 열(column)을 가진 "표"와 유사한 형태로 데이터를 저장합니다. 각 테이블은 특정한 "주제"나 "개념"에 대한 정보를 모아 놓습니다. 예를 들어, "고객" 테이블은 고객에 관한 정보를, "주문" 테이블은 주문에 관한 정보를 저장할 수 있습니다.
 
-![img.png](images/sql_img1.png)
+![img.png](../images/sql_img1.png)
 
 ### 컬럼 (Column)
 
 테이블 내에서 컬럼은 "필드"나 "속성"이라고도 하며, 테이블에서 관리하려는 각각의 정보 유형을 나타냅니다. 예를 들어, "고객" 테이블의 경우 컬럼은 '고객ID', '이름', '이메일 주소', '전화번호' 등이 될 수 있습니다.
 
-![img.png](images/sql_img2.png)
+![img.png](../images/sql_img2.png)
 
 ### 2. 프로그래머스에서 사용할 수 있는 두 개의 DB
 
@@ -286,7 +286,8 @@ SELECT COUNT(age) FROM users; → NULL 제외<br>
 HAVING COUNT(*) >= 5 → 그룹 중 5개 이상인 것만<br>
 ORDER BY COUNT(*) DESC → 그룹 크기 기준 정렬 (서브쿼리 또는 별칭 필요)
 ```
-🔎 주의: COUNT(*)은 NULL 포함, COUNT(column)은 NULL 제외됨
+🔎 주의: COUNT(*)은 NULL 포함, COUNT(column)은 NULL 제외됨<br>
+🔎 주의: COUNT(column)은 NULL이면 0 출력?
 ### SUM() – 합계 구하기
 ```sql
 SELECT SUM(price) FROM orders;
