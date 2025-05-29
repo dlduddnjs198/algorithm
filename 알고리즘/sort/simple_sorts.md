@@ -175,8 +175,7 @@
 
 ## 4. Java 코드 구현
 
-* [기본 구현](sort.java)
-* [최적화 / 실전형 구현(선택, 개선된 방식이 있다면 여기에 추가)](sort_simplify.java)
+* [기본 구현](./code/SelectionSort.java)
 
 ---
 
@@ -286,8 +285,8 @@
 
 ## 4. Java 코드 구현
 
-* [기본 구현](sort.java)
-* [최적화 / 실전형 구현(선택, 개선된 방식이 있다면 여기에 추가)](sort_simplify.java)
+* [기본 구현](./code/InsertionSort.java)
+* [셸 정렬]
 
 ---
 
