@@ -15,7 +15,7 @@
 ## 1. 선형 자료구조
 
 - 배열 (Array)
-- 리스트 (ArrayList, LinkedList)
+- [리스트 (ArrayList, LinkedList)](detail/List.md)
 - 스택 (Stack)
 - 큐 (Queue)
 - 덱 (Deque)
@@ -31,9 +31,72 @@
 
 ## 3. 해시 기반 자료구조
 
-- HashMap / HashSet
-- LinkedHashMap
-- TreeMap (정렬 기반 탐색 가능)
+해시 기반 구조는 **탐색 속도를 높이기 위해 자주 사용되는 선형 컬렉션**입니다.  
+기본적으로 평균 O(1)의 탐색/삽입 속도를 가지며, **Set**과 **Map** 계열로 나눌 수 있습니다.
+
+### ✅ Map과 Set의 차이
+
+- **Set**은 “값의 존재 유무”만을 판단하는 자료구조입니다.  
+  중복을 허용하지 않으며, 하나의 값만 저장합니다.  
+  `add(value)`, `contains(value)` 같은 연산이 핵심입니다.
+
+- **Map**은 “키-값 쌍”을 저장하는 구조입니다.  
+  하나의 키에 하나의 값을 대응시켜 저장하며, 키는 중복이 불가능합니다.  
+  `put(key, value)`, `get(key)`, `containsKey(key)`가 주된 연산입니다.
+
+### ✅ Hash / Tree / Linked 계열 차이
+
+- **Hash 기반**:  
+  내부적으로 해시 함수를 이용하여 빠른 탐색 (평균 O(1))을 지원합니다.  
+  순서나 정렬은 보장되지 않습니다. → `HashMap`, `HashSet`
+
+- **Linked 기반**:  
+  해시 구조에 **입력 순서를 기억하는 연결 리스트**를 추가하여,  
+  **입력 순서 or 접근 순서**대로 순회할 수 있게 만든 구조입니다.  
+  → `LinkedHashMap`, `LinkedHashSet`
+
+- **Tree 기반**:  
+  이진 탐색 트리(Red-Black Tree)를 사용하여,  
+  **자동 정렬**과 **범위 기반 탐색**을 지원합니다.<br>
+  삽입/삭제/탐색 모두 O(log n)
+  → `TreeMap`, `TreeSet`
+
+### 🔹 Set 계열
+
+- **HashSet**
+  - 시간 복잡도: 삽입/삭제/탐색 평균 O(1), 최악 O(n)
+  - 중복 없는 집합 구조, 순서 없음
+  - 해시 충돌이 없을 때 매우 빠름
+- **LinkedHashSet**
+  - 시간 복잡도: 삽입/삭제/탐색 평균 O(1)
+  - 입력 순서를 유지한 순회 가능
+  - 메모리 사용량은 HashSet보다 다소 큼
+- **TreeSet**
+  - 시간 복잡도: 삽입/삭제/탐색 O(log n)
+  - 자동 정렬된 집합
+  - `floor`, `ceiling`, `higher`, `lower` 같은 범위 기반 탐색 가능
+
+### 🔹 Map 계열
+- **HashMap**
+  - 시간 복잡도: 삽입/삭제/탐색 평균 O(1), 최악 O(n)
+  - 순서를 보장하지 않음
+  - 키 중복 불가, 해시 충돌 시 성능 저하 가능
+- **LinkedHashMap**
+  - 시간 복잡도: 삽입/삭제/탐색 평균 O(1)
+  - 입력 순서 또는 접근 순서 유지
+  - `accessOrder=true` 옵션으로 LRU 캐시 구현 가능
+- **TreeMap**
+  - 시간 복잡도: 삽입/삭제/탐색 O(log n)
+  - 키를 자동 정렬 (기본은 오름차순, 커스텀 comparator 지원)
+  - `subMap`, `floorKey`, `ceilingKey` 등 범위 탐색 지원
+
+> 📌 TreeMap, TreeSet은 내부적으로 해시가 아닌 **이진 탐색 트리 기반**이므로,  
+> 구조적으로는 [트리 구조](#4-트리-구조)에도 포함됩니다. 다만 탐색 목적상 여기서도 함께 다룹니다.
+
+### 🔗 세부 문서
+
+- [Set 구조 정리 (HashSet, TreeSet, LinkedHashSet)](detail/Set.md)
+- [Map 구조 정리 (HashMap, TreeMap, LinkedHashMap)](detail/Map.md)
 
 ---
 
